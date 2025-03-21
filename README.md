@@ -4,6 +4,8 @@
 
 🎥 [Video Demo](https://www.youtube.com/watch?v=0l37zi-uJw4)
 
+![App Screenshot](static/images/screenshot.png)
+
 ---
 
 ## Why SurgiTrack?
