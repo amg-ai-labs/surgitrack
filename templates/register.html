@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sign Up
+{% endblock %}
+
+{% block main %}
+<div class="register-container">
+    <h1 class="register-title">Sign up to access the following features</h1>
+    <ul class="features-list">
+        <li>Keep track of your operations</li>
+        <li>See totals for each operation</li>
+        <li>Monitor progress over time</li>
+        <li>See more exclusive content</li>
+    </ul>
+    <form action="/register" method="post">
+        <div class="mb-3 form-group">
+            <input autocomplete="off" autofocus class="form-control form-input" name="username" placeholder="Username" type="text">
+        </div>
+        <div class="mb-3 form-group">
+            <input class="form-control form-input" name="password" placeholder="Password" type="password">
+        </div>
+        <div class="mb-3 form-group">
+            <input class="form-control form-input" name="confirmation" placeholder="Confirm Password" type="password">
+        </div>
+        <div class="text-center">
+            <button class="btn btn-primary register-btn" type="submit">Register</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

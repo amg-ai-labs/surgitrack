@@ -1,0 +1,375 @@
+/* LAYOUT */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container, .container-fluid {
+    padding: 0;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.navbar {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: -25px !important;
+}
+
+.logo-surgi {
+    color: #2e2e2d;
+    font-weight: bold;
+    font-size: 32px;
+    margin-left: 2em;
+    letter-spacing: .1rem;
+}
+
+.logo-track {
+    color: #0056b3;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.nav-link {
+    margin: 0 20px;
+    font-weight: bold;
+    color: #5a5a5a;
+}
+
+.nav-link:hover, .nav-link:focus {
+    color: #b1b1b1;
+    text-decoration: none;
+}
+
+.btn-custom {
+    color: #fff;
+    background-color: #6c757d;
+    border: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-right: 2em;
+}
+
+.btn-custom:hover, .btn-custom:focus {
+    background-color: #5a6268;
+    color: #fff;
+}
+
+.btn-signup {
+    color: #0056b3;
+    background-color: transparent;
+    border: 2px solid #0056b3;
+    font-weight: bold;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-signup:hover, .btn-signup:focus {
+    color: #fff;
+    background-color: #0056b3;
+}
+
+.footer {
+    color: #6c757d;
+    font-weight: bold;
+    background-color: #fff;
+}
+
+/* FLASH MESSAGES */
+.flash-message.error {
+    color: #fff;
+    background-color: #dc3545;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+
+/* INDEX PAGE */
+.intro-section {
+    background-color: #e0f0ff;
+    padding: 50px 20px;
+    text-align: center;
+    margin-top: 0 !important;
+}
+
+.intro-section h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.intro-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.btn-signup-index {
+    font-size: 1.2rem;
+    padding: 10px 30px;
+    background-color: #0056b3;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-signup:hover {
+    background-color: #003d82;
+}
+
+.cards-section {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 20px;
+    background-color: #f8f9fa;
+    flex-wrap:wrap
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 10px;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.card-title {
+    margin-bottom: 20px;
+}
+
+.card-icon {
+    width: 60px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.btn-primary {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.btn-primary:hover {
+    background-color: #003d82;
+    border-color: #003d82;
+}
+
+/* LOGIN PAGE */
+.login-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.login-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-input {
+    width: calc(100% - 20px);
+    margin: auto;
+    display: block;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 10px;
+    font-weight: bold;
+    background-color: #004085;
+    border-color: #003769;
+}
+
+.login-btn:hover {
+    background-color: #003769;
+    border-color: #003054;
+}
+
+/* REGISTER PAGE */
+.register-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.register-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.features-list {
+    list-style: inside;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-left: 0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-input {
+    width: calc(100% - 20px);
+    margin: auto;
+    display: block;
+}
+
+.register-btn {
+    width: 100%;
+    padding: 10px;
+    font-weight: bold;
+    background-color: #004085;
+    border-color: #003769;
+}
+
+.register-btn:hover {
+    background-color: #003769;
+    border-color: #003054;
+}
+
+/* LOGBOOK PAGE */
+.operations-table {
+    width: 80%;
+    margin: 100px auto;
+    overflow-x: auto;
+}
+
+.operations-summary-table {
+    width: 30%;
+    margin: 100px auto;
+    overflow-x: auto;
+}
+
+.operations-table table, .operations-summary-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.operations-table th, .operations-table td, .operations-summary-table th, .operations-summary-table td {
+    text-align: center;
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+.operations-table th, .operations-summary-table th {
+    background-color: #f2f2f2;
+}
+
+.operations-table tr:nth-child(even), .operations-summary-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.operations-table select, .operations-table input[type=date], .operations-table input[type=text] {
+    width: 100%;
+    padding: 6px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    box-sizing: border-box;
+}
+
+.operations-table button {
+    background-color: #add8e6;
+    color: #000000;
+    padding: 6px 10px;
+    border: 1px solid #add8e6;
+    cursor: pointer;
+}
+
+.operations-table button:hover {
+    background-color: #87CEEB;
+}
+
+.btn-delete {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.btn-delete:hover {
+    background-color: #d32f2f;
+}
+
+/* OPERATION PAGES */
+.video-container {
+    position: relative;
+    overflow: hidden;
+    width: 60%;
+    padding-top: 28.125%;
+    margin: 50px auto;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.document-section {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 50px auto;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 60%;
+}
+
+.document-section h2 {
+    border-bottom: 2px solid #2e2e2d;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.patient-details p {
+    margin: 0 0 10px;
+}
+
+.quiz-section {
+    width: 40%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.quiz-options {
+    list-style-type: none;
+    padding: 0;
+}
+
+.quiz-options li {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.quiz-options li:hover {
+    background-color: #e0e0e0;
+}
+
+.feedback {
+    margin-top: 15px;
+    font-weight: bold;
+    text-align: center;
+}

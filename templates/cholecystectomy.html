@@ -1,0 +1,155 @@
+{% extends "layout.html" %}
+
+{% block title %}
+   Cholecystectomy
+{% endblock %}
+
+{% block main %}
+
+    <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/8tepFfxTaZw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <div class="document-section consent">
+        <h2>Consent Form</h2>
+        <div class="patient-details">
+            <p><strong>Full Name:</strong> [Patient Name]</p>
+            <p><strong>DOB:</strong> [Date of Birth]</p>
+            <p><strong>Hospital Number:</strong> [Hospital Number]</p>
+            <p><strong>Consultant:</strong> [Consultant Name]</p>
+            <br>
+        </div>
+
+        <p><strong>Operation Name:</strong> Laparoscopic Cholecystectomy ± Open ± Proceed</p>
+        <br>
+
+        <p><strong>Benefits:</strong>
+            <ul>
+                <li>Treat gallstones</li>
+                <li>Symptomatic relief</li>
+                <li>Prevent complications (e.g. cholecystitis)</li>
+            </ul>
+        </p>
+        <br>
+
+        <p><strong>Risks:</strong>
+            <ul>
+                <li>Bleeding</li>
+                <li>Infection</li>
+                <li>Pain</li>
+                <li>Scarring</li>
+                <li>Damage to surrouding structures including liver and bowel</li>
+                <li>Bile duct injury (1 in 300)</li>
+                <li>Bile leak</li>
+                <li>Retained stones</li>
+                <li>Collections</li>
+                <li>Diarrhoea and reflux</li>
+                <li>Anaesthetic risks</li>
+                <li>Blood clots</li>
+            </ul>
+        </p>
+        <br>
+
+        <p><strong>Other procedures:</strong> Drain insertion, intra-operative cholangiogram</p>
+    </div>
+
+    <div class="document-section operation-note">
+        <h2>Operation Note Example</h2>
+        <div class="patient-details">
+            <p><strong>Full Name:</strong> [Patient Name]</p>
+            <p><strong>DOB:</strong> [Date of Birth]</p>
+            <p><strong>Hospital Number:</strong> [Hospital Number]</p>
+            <br>
+            <p><strong>Consultant:</strong> [Consultant Name]</p>
+            <p><strong>Surgeon:</strong> [Primary Surgeon Name]</p>
+            <p><strong>Assistant:</strong> [Assistant Name]</p>
+            <p><strong>Anaesthetist:</strong> [Anaesthetist Name]</p>
+            <br>
+        </div>
+
+        <p><strong>Operation:</strong> Laparoscopic Cholecystectomy</p>
+        <p><strong>Indication:</strong> Gallstones, previous cholecystitis</p>
+        <br>
+
+        <p><strong>Findings:</strong>
+            <ul>
+                <li>Thin-walled gallbladder.</li>
+            </ul>
+        </p>
+        <br>
+
+        <p><strong>Incision and Approach:</strong>
+            <ul>
+                <li>Infraumbilical Hasson's open entry 10mm port.</li>
+                <li>Epigastric port 10mm, right upper quadrant and right flank 5mm ports all under direct vision</li>
+            </ul>
+        </p>
+        <br>
+
+        <p><strong>Procedure:</strong>
+            <ul>
+                <li>Peritoneum over gallbladder opened anteriorly and posteriorly.</li>
+                <li>Calot's triangle identified and critical view of safety achieved using combination of hook diathermy and blunt dissection.</li>
+                <li>Cystic duct clipped (2+1) with 10mm ligaclip and cut in between.</li>
+                <li>Cystic artery clipped (2+1) with 10mm ligaclip and cut in between.</li>
+                <li>Gallbladder removed from liver bed with diathermy and retrieved via BERT bag through umbilical port under direct vision.</li>
+                <li>Local washout to RUQ.</li>
+                <li>Haemostasis achieved.</li>
+                <li>Ports removed under direct vision.</li>
+            </ul>
+        </p>
+        <br>
+
+        <p><strong>Closure:</strong>
+            <ul>
+                <li>Z-shaped J-PDS to umbilical fascia (finger sweep clear).</li>
+                <li>Subcuticular 3-0 monocryl.</li>
+                <li>Simple dressing.</li>
+            </ul>
+        </p>
+        <br>
+
+        <p><strong>Specimens:</strong>
+            <ul>
+                <li>1x gallbladder histopathology.</li>
+            </ul>
+        </p>
+        <br>
+
+        <p><strong>Post-operative Instructions:</strong>
+            <ul>
+                <li>Routine post-operative observations</li>
+                <li>Analgesia</li>
+                <li>Mobilise</li>
+                <li>Eat and drink as tolerated</li>
+                <li>No heavy lifting for 6-8 weeks</li>
+                <li>Aim home today when pain controlled and passes urine</li>
+            </ul>
+        </p>
+    </div>
+
+    <div class="quiz-section">
+        <h3>What structure crosses Calot's triangle?</h3>
+        <ul class="quiz-options">
+            <li onclick="checkAnswer(false)">Portal vein</li>
+            <li onclick="checkAnswer(true)">Cystic artery</li>
+            <li onclick="checkAnswer(false)">Common bile duct</li>
+        </ul>
+    </div>
+
+    <div id="feedback-message" class="feedback"></div>
+
+    <script>
+    function checkAnswer(isCorrect) {
+        var feedback = document.getElementById("feedback-message");
+        if (isCorrect) {
+            feedback.textContent = "Correct! The cystic artery is the key structure that crosses Calot's triangle before it supplies the gallbladder. It usually branches off the right hepatic artery.";
+            feedback.style.color = "green";
+        } else {
+            feedback.textContent = "Incorrect! Try again.";
+            feedback.style.color = "red";
+        }
+    }
+    </script>
+
+{% endblock %}

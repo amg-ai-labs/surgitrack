@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block title %}
+   Operations
+{% endblock %}
+
+{% block main %}
+
+<div class="container mt-5">
+    <h2 class="mb-4 text-center">Operations in General Surgery</h2>
+
+    <div class="row">
+        <!-- Laparoscopic Appendicectomy -->
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <img src="static/images/appendix.png" alt="Appendix Icon" class="card-img-top img-fluid">
+                    <h4 class="card-title">Laparoscopic Appendicectomy</h4>
+                    <p class="card-text">A minimally invasive procedure to remove the appendix.</p>
+                    <a href="/appendicectomy" class="stretched-link"></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Laparoscopic Cholecystectomy -->
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <img src="static/images/gallbladder.png" alt="Gallbladder Icon" class="card-img-top img-fluid">
+                    <h4 class="card-title">Laparoscopic Cholecystectomy</h4>
+                    <p class="card-text">Minimally invasive removal of the gallbladder.</p>
+                    <a href="/cholecystectomy" class="stretched-link"></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Exploratory Laparotomy -->
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <img src="static/images/laparotomy.png" alt="Laparotomy Icon" class="card-img-top img-fluid">
+                    <h4 class="card-title">Exploratory Laparotomy</h4>
+                    <p class="card-text">Open exploration of the abdominal cavity.</p>
+                    <a href="/laparotomy" class="stretched-link"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

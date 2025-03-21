@@ -1,0 +1,145 @@
+{% extends "layout.html" %}
+
+{% block title %}
+   Laparotomy
+{% endblock %}
+
+{% block main %}
+
+    <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/vcy701bNuY0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <div class="document-section consent">
+        <h2>Consent Form</h2>
+        <div class="patient-details">
+            <p><strong>Full Name:</strong> [Patient Name]</p>
+            <p><strong>DOB:</strong> [Date of Birth]</p>
+            <p><strong>Hospital Number:</strong> [Hospital Number]</p>
+            <p><strong>Consultant:</strong> [Consultant Name]</p>
+            <br>
+        </div>
+
+        <p><strong>Operation Name:</strong> Emergency Laparotomy ± adhesiolysis ± small or large bowel resection ± stoma ± proceed</p>
+        <br>
+
+        <p><strong>Benefits:</strong>
+            <ul>
+                <li>Treat peritonitis</li>
+                <li>Symptomatic relief</li>
+                <li>Prevent complications (e.g. sepsis, death)</li>
+            </ul>
+        </p>
+        <br>
+
+        <p><strong>Risks:</strong>
+            <ul>
+                <li>Bleeding</li>
+                <li>Infection</li>
+                <li>Pain</li>
+                <li>Scarring</li>
+                <li>Damage to surrouding structures including bowel, bladder, ureter, liver, spleen</li>
+                <li>Anastomotic leak</li>
+                <li>Collections</li>
+                <li>Need for further procedures</li>
+                <li>Ileus</li>
+                <li>Anaesthetic risks</li>
+                <li>Blood clots</li>
+            </ul>
+        </p>
+        <br>
+
+        <p><strong>Other procedures:</strong> Catheter, Drain insertion</p>
+    </div>
+
+    <div class="document-section operation-note">
+        <h2>Operation Note Example</h2>
+        <div class="patient-details">
+            <p><strong>Full Name:</strong> [Patient Name]</p>
+            <p><strong>DOB:</strong> [Date of Birth]</p>
+            <p><strong>Hospital Number:</strong> [Hospital Number]</p>
+            <br>
+            <p><strong>Consultant:</strong> [Consultant Name]</p>
+            <p><strong>Surgeon:</strong> [Primary Surgeon Name]</p>
+            <p><strong>Assistant:</strong> [Assistant Name]</p>
+            <p><strong>Anaesthetist:</strong> [Anaesthetist Name]</p>
+            <br>
+        </div>
+
+        <p><strong>Operation:</strong> Emergency Laparotomy + adhesiolysis</p>
+        <p><strong>Indication:</strong> Small bowel obstruction</p>
+        <br>
+
+        <p><strong>Findings:</strong>
+            <ul>
+                <li>Closed loop small bowel obstruction in mid-ileum.</li>
+                <li>30cm segment of bowel with 2 omental bands at either end.</li>
+            </ul>
+        </p>
+        <br>
+
+        <p><strong>Incision and Approach:</strong>
+            <ul>
+                <li>Midline incision.</li>
+            </ul>
+        </p>
+        <br>
+
+        <p><strong>Procedure:</strong>
+            <ul>
+                <li>Exploratory laparotomy performed.</li>
+                <li>Closed loop segment found and omental adhesions proximally and distally divided.</li>
+                <li>Segment viable, therefore no resection performed.</li>
+                <li>Small bowel walked from DJ flexure to terminal ileum - rest of small bowel healthy and no other abnormalities found.</li>
+                <li>2 litres of normal saline washout to all four quadrants.</li>
+            </ul>
+        </p>
+        <br>
+
+        <p><strong>Closure:</strong>
+            <ul>
+                <li>2x loop PDS for midline closure.</li>
+                <li>Clips to skin</li>
+                <li>Simple dressing.</li>
+            </ul>
+        </p>
+        <br>
+
+        <p><strong>Post-operative Instructions:</strong>
+            <ul>
+                <li>Routine post-operative observations</li>
+                <li>Analgesia</li>
+                <li>Mobilise as tolerated</li>
+                <li>Free fluids and build up diet as tolerated</li>
+                <li>Remove ryles tube</li>
+                <li>Prophylactic LMWH 6 hours post op</li>
+                <li>Clips out in 10-14 days post op</li>
+            </ul>
+        </p>
+    </div>
+
+    <div class="quiz-section">
+        <h3>What is a common cause of small bowel obstruction?</h3>
+        <ul class="quiz-options">
+            <li onclick="checkAnswer(false)">Malignancy</li>
+            <li onclick="checkAnswer(true)">Hernia</li>
+            <li onclick="checkAnswer(false)">Diverticulitis</li>
+        </ul>
+    </div>
+
+    <div id="feedback-message" class="feedback"></div>
+
+    <script>
+    function checkAnswer(isCorrect) {
+        var feedback = document.getElementById("feedback-message");
+        if (isCorrect) {
+            feedback.textContent = "Correct! The two main causes of small bowel obstruction are adhesions and hernias.";
+            feedback.style.color = "green";
+        } else {
+            feedback.textContent = "Incorrect! This is a common cause of large bowel obstruction.";
+            feedback.style.color = "red";
+        }
+    }
+    </script>
+
+{% endblock %}

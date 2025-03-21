@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+   Home
+{% endblock %}
+
+{% block main %}
+<div class="intro-section">
+    <h1>The ultimate learning companion for surgeons</h1>
+    <p>SurgiTrack helps you keep on track with your training.</p>
+</div>
+
+<div class="cards-section">
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+         <img src="static/images/scalpel.svg" alt="Consent Icon" class="card-icon">
+            <h5 class="card-title">Learn how to consent for operations</h5>
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <img src="static/images/sheet.svg" alt="Consent Icon" class="card-icon">
+            <h5 class="card-title">Learn how to write operation notes</h5>
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <img src="static/images/table.svg" alt="Consent Icon" class="card-icon">
+            <h5 class="card-title">Keep a track of your logbook</h5>
+        </div>
+    </div>
+</div>
+{% endblock %}

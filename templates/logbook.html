@@ -1,0 +1,110 @@
+{% extends "layout.html" %}
+
+{% block title %}
+   Logbook
+{% endblock %}
+
+{% block main %}
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+      <div class="flash-message {{ category }}">{{ message }}</div>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+
+<div class="operations-table">
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Name</th>
+                <th>Mode</th>
+                <th>Supervision Code</th>
+                <th>Hospital</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for operation in operations %}
+            <tr>
+                <td>{{ operation.date }}</td>
+                <td>{{ operation.name }}</td>
+                <td>{{ operation.mode }}</td>
+                <td>{{ operation.supervision }}</td>
+                <td>{{ operation.hospital }}</td>
+                <td>
+                    <!-- Delete Operation Form -->
+                    <form action="/delete_operation" method="POST">
+                        <input type="hidden" name="operation_id" value="{{ operation.id }}">
+                        <button type="submit">Delete Operation</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+            <!-- Row for adding a new operation -->
+            <tr>
+            <form action="/logbook" method="post">
+               <td><input type="date" name="date"></td>
+               <td>
+                  <select name="name">
+                     <option value="" disabled selected>Operation Name</option>
+                     <option value="appendicectomy">Appendicectomy</option>
+                     <option value="cholecystectomy">Cholecystectomy</option>
+                     <option value="inguinal hernia repair">Inguinal Hernia Repair</option>
+                     <option value="umbilical hernia repair">Umbilical Hernia Repair</option>
+                     <option value="small bowel resection">Small Bowel Resection</option>
+                     <option value="colectomy">Colectomy</option>
+                  </select>
+               </td>
+               <td>
+                  <select name="mode">
+                     <option value="" disabled selected>Mode</option>
+                     <option value="open">Open</option>
+                     <option value="laparoscopic">Laparoscopic</option>
+                     <option value="robotic">Robotic</option>
+                  </select>
+               </td>
+               <td>
+                  <select name="supervision_code">
+                     <option value="" disabled selected>Supervision</option>
+                     <option value="O">Observed</option>
+                     <option value="A">Assisted</option>
+                     <option value="STS">Supervisor trainer scrubbed</option>
+                     <option value="STU">Supervisor trained unscrubbed</option>
+                     <option value="P">Performed</option>
+                  </select>
+               </td>
+               <td><input type="text" name="hospital"></td>
+               <td><button type="submit">Add Operation</button></td>
+            </form>
+            </tr>
+         </tbody>
+      </table>
+</div>
+
+
+
+<!-- Table for Aggregated Operation Counts -->
+<div class="operations-summary-table">
+   <table>
+       <thead>
+           <tr>
+               <th>Operation</th>
+               <th>Total Number</th>
+           </tr>
+       </thead>
+       <tbody>
+           {% for operation_count in operation_counts %}
+           <tr>
+               <td>{{ operation_count.name }}</td>
+               <td>{{ operation_count.total_number }}</td>
+           </tr>
+           {% endfor %}
+       </tbody>
+   </table>
+</div>
+
+
+{% endblock %}
